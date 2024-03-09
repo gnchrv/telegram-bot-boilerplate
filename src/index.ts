@@ -35,5 +35,5 @@ bot.onText(/.*/, async msg => {
 // Start a polling server
 const port = process.env.PORT
 new Server().listen({ port }, () =>
-    console.log(`💫 The Telegram Bot is running on port ${port} `)
+    console.log(`💫 The Telegram Bot is running on port ${port}`)
 )
