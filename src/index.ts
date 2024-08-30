@@ -1,6 +1,6 @@
 import 'dotenv/config'
-import TelegramBot from 'node-telegram-bot-api'
 import { Server } from 'http'
+import TelegramBot from 'node-telegram-bot-api'
 
 // Initialise the bot and enable polling
 const bot = new TelegramBot(
@@ -14,7 +14,7 @@ bot.onText(/.*/, async msg => {
     const firstName = msg.chat.first_name
 
     // Compose a reply with markdown formatting
-    const welcomingMsg = `Hello${firstName ? ', ' + firstName : ''}! 👋🏻\nThis is a simple bot that _currently_ do nothing. Configure it in a way you need!`
+    const welcomingMsg = `Hello${firstName ? ', ' + firstName : ''}! 👋🏻\nThis is a simple bot that _currently_ does nothing. Configure it as you need`
 
     // Send the message
     await bot.sendMessage(msg.chat.id, welcomingMsg, {
